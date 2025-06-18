@@ -738,30 +738,23 @@ h3 {
     align-items: center;
     justify-content: center;
     color: #EDEFFA;
-     -webkit-appearance: none;
-    appearance: none;
     
 }
 
 .checkbox_marker::after {
-    content: '✔';
-    font-weight: 500;
-    font-size: 18px;
-    color: #fdfdfd00;
-    opacity: 0;
-     -webkit-appearance: none;
-    appearance: none;
+    content: '';
+   display: block;
+   background: url('./img/check.svg') 50% / contain no-repeat;
+    width: 24px;
+    height: 24px;
+
+   
 }
 
 .checkbox_hidden:checked+.checkbox_marker {
     background-color: #4A6FFE;
 }
-.checkbox_hidden:checked+.checkbox_marker::after {
-    opacity: 1;
-    color: #ffffff;
-     -webkit-appearance: none;
-    appearance: none;
-}
+
 .page-invest__form_call input[type='tel'].error {
     border-color: red;
     box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
