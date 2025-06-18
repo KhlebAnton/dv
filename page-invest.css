@@ -749,6 +749,8 @@ h3 {
     font-size: 18px;
     color: #fdfdfd00;
     opacity: 0;
+     -webkit-appearance: none;
+    appearance: none;
 }
 
 .checkbox_hidden:checked+.checkbox_marker {
@@ -756,7 +758,9 @@ h3 {
 }
 .checkbox_hidden:checked+.checkbox_marker::after {
     opacity: 1;
-    color: #ffffff !important;
+    color: #ffffff;
+     -webkit-appearance: none;
+    appearance: none;
 }
 .page-invest__form_call input[type='tel'].error {
     border-color: red;
