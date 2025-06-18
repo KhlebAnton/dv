@@ -737,18 +737,23 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #EDEFFA;
+    
 }
 
 .checkbox_marker::after {
     content: '✔';
     font-size: 18px;
     color: #EDEFFA;
+    opacity: 0;
 }
 
 .checkbox_hidden:checked+.checkbox_marker {
     background-color: #4A6FFE;
 }
-
+.checkbox_hidden:checked+.checkbox_marker::after {
+    opacity: 1;
+}
 .page-invest__form_call input[type='tel'].error {
     border-color: red;
     box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
