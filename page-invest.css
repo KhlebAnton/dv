@@ -1101,6 +1101,7 @@ h3 {
         padding-left: 24px;
         padding-right: 24px;
          padding-bottom: 100px;
+         border-radius: 20px;
     }
 .page-invest__grow_item.main_grow_item {
     padding-bottom: 80px;
@@ -1282,5 +1283,11 @@ h3 {
 .page-invest__form_call,
 .page-invest__search-invest {
     padding: 40px 0;
+}
+.page-invest__form_plan__form,
+.page-invest__form_plan__wrapper,
+.page-invest__form_call__wrapper,
+.page-invest__form_call__img img {
+    border-radius: 20px;
 }
 }
