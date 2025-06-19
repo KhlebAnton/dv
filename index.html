@@ -631,7 +631,11 @@
                 </section>
                 <section class="page-invest__form_call">
                     <div class="page-invest__form_call__container container">
-                        <img class="page-invest__form_call__img" src="./img/photo_dmitriy.png">
+                        <picture class="page-invest__form_call__img">
+                            <source srcset="./img/photo_dmitriy_mob.png" media="(max-width: 1000px)">
+                            <img  src="./img/photo_dmitriy.png">
+                        </picture>
+                        
                         <div class="page-invest__form_call__wrapper">
                             <div class="page-invest__form_call__top">
                                 <span>
@@ -717,19 +721,21 @@
                             </div>
                             <div class="page-invest__form_plan__form-wrapper">
                                 <form class="page-invest__form page-invest__form_plan__form">
-                                    <span class="page-invest__form_plan__form-title">заявка ни к чему не обязывает</span>
+                                    <span class="page-invest__form_plan__form-title">заявка ни к чему не
+                                        обязывает</span>
                                     <input type="text" name="name" required placeholder="Ваше имя*">
 
                                     <div class="phone-input-wrapper">
                                         <input type="tel" name="phone" class="iti_phone" required
                                             placeholder="Телефон*">
                                     </div>
-                                     <label class="label_input-msg">
+                                    <label class="label_input-msg">
                                         <div class="textarea_btn">
                                             <span>добавить сообщение</span>
                                         </div>
-                                       <textarea class="textarea_hidden" name="msg" placeholder="Введите сообщение"></textarea>
-                                     </label>
+                                        <textarea class="textarea_hidden" name="msg"
+                                            placeholder="Введите сообщение"></textarea>
+                                    </label>
                                     <button type="submit" class="btn-primary">свяжитесь со мной</button>
 
 
@@ -743,7 +749,7 @@
                                                 конфиденциальности.</a>
                                         </span>
                                     </label>
-                                   
+
                                     <label class="label_check">
                                         <input type="checkbox" class="checkbox_hidden" name="politick">
                                         <div class="checkbox_marker"></div>
