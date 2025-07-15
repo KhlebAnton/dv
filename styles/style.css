@@ -780,7 +780,7 @@ section.hero {
     transition: all .3s ease;
 }
 
-.accordion-item .accordion-item__icon path:last-child {
+.accordion-item.is-open .accordion-item__icon path:last-child {
     opacity: 0;
 
 }
@@ -789,7 +789,7 @@ section.hero {
     stroke: #434343;
 }
 
-.accordion-item.is-open .accordion-item__icon path:last-child {
+.accordion-item .accordion-item__icon path:last-child {
     opacity: 1;
 }
 
