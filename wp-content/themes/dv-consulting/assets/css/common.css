@@ -11,8 +11,8 @@
 * $margin - отступ margin для айтемов
 * $addmargin - нужно ли задавать маргин для селектора (чаще всего подходит для адаптива)
 */
-@import url("https://fonts.googleapis.com/css?family=Oswald:regular,500,600,700&amp;display=swap");
-@import url("https://fonts.googleapis.com/css?family=Inter:regular,500&amp;display=swap");
+@import url("https://fonts.googleapis.com/css?family=Oswald:regular,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Inter:regular,500&display=swap");
 input {
   -webkit-mask-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC");
   mask-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC");
@@ -3506,6 +3506,8 @@ footer img {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
   padding-top: 20px;
   margin-top: 60px;
   border-top: 1px solid #727272;
@@ -3544,6 +3546,10 @@ footer img {
     width: 100%;
     gap: 10px;
   }
+}
+.copyright-top {
+  text-align: center;
+  width: 100%;
 }
 /* Плашка в шапке */
 .header-block-info {
@@ -3871,5 +3877,127 @@ footer img {
 .main-popup-info .callback-popup__policy,
 .main-popup-info .callback-popup__policy a:hover {
   color: #fff;
+}
+
+/* cookie */
+.cookie_popup {
+  padding: 30px 20px;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 3px 4px 12px 0px #788DB830;
+  color: #000;
+  margin: 16px;
+  position: fixed;
+  z-index: 12;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 811px;
+  width: calc(100%);
+  display: flex;
+  align-items: center;
+  gap: 31px;
+  transition: transform .3s, opacity .3s;
+}
+
+.cookie_popup.hidden {
+  transform: translateX(-50%) translateY(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.cookie_popup a {
+  text-decoration: underline;
+}
+
+.cookie_popup a:hover {
+  color: #2176ff;
+}
+
+.cookie_popup p {
+  font-size: 12px;
+  max-width: 590px;
+  font-family: StyreneAWeb, sans-serif;
+}
+
+.btn_cookie {
+  flex-grow: 3;
+  flex-shrink: 0;
+  max-width: 223px;
+  text-align: center;
+  width: fit-content;
+  margin: 0;
+  line-height: inherit;
+  cursor: pointer;
+  padding: 12px;
+}
+
+@media (max-width:1000px) {
+  .cookie_popup {
+    padding: 20px;
+    align-items: end;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateX(0);
+    max-width: none;
+    width: auto;
+    gap: 16px;
+
+  }
+
+  .cookie_popup.hidden {
+    transform: translateY(100%);
+  }
+  .btn_cookie {
+    height: 40px;
+    font-size: 14px;
+    padding: 0;
+    line-height: 40px;
+  }
+}
+@media (max-width:550px) {
+  .cookie_popup {
+    flex-direction: column;
+  }
+  .btn_cookie {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.agreement {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.section-audit__form-agreement.agreement {
+  margin: 0;
+  max-width: 100%;
+}
+.agreement label {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  font-size: 14px;
+  opacity: 1;
+  position: relative;
+  z-index: initial;
+}
+.agreement small {
+  text-align: left;
+}
+.agreement input,
+.section-hero .hero-right__form .agreement input {
+  min-width: 13px;
+  width: 13px;
+  height: 13px;
+  padding: 0;
+  border-radius: 0;
+  margin: 1px 0 0;
+  appearance: auto;
+}
+.agreement label a {
+  text-decoration: underline;
 }
 /*# sourceMappingURL=common.css.map */
